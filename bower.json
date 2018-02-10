@@ -1,0 +1,15 @@
+{
+  "name": "cheetah",
+  "description": "Web application to visualize and manage graphical representation of work using agile methodologies for agile teams",
+  "version": "0.1.0",
+  "homepage": "https://github.com/marcosflobo/cheetah",
+  "license": "BSD-3-clause",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.6.7",
+    "angular-route": "~1.6.7",
+    "angular-loader": "~1.6.7",
+    "angular-mocks": "~1.6.7",
+    "html5-boilerplate": "^5.3.0"
+  }
+}
