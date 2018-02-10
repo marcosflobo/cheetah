@@ -17,3 +17,7 @@ To perform unit tests, we need to install some packages using [npm](https://www.
 ```bash
 npm install -g karma jasmine karma-chrome-launcher karma-firefox-launcher karma-jasmine karma-junit-reporter jasmine-core karma-coverage grunt-cli
 ```
+## Run unit tests + code coverage
+```bash
+karma start karma.conf.js
+```
