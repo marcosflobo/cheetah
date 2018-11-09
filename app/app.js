@@ -10,8 +10,23 @@
     function config($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                controller: 'View1Ctrl',
-                templateUrl: 'view1/view1.html',
+                controller: 'HomeCtrl',
+                templateUrl: 'home/home.html',
+                controllerAs: 'vm'
+            })
+            .when('/burndows', {
+                controller: 'BurndownsController',
+                templateUrl: 'burndowns/burndowns.html',
+                controllerAs: 'vm'
+            })
+            .when('/release_burndowns', {
+                controller: 'ReleaseBurndownsController',
+                templateUrl: 'release_burndowns/release_burndowns.html',
+                controllerAs: 'vm'
+            })
+            .when('/velocity', {
+                controller: 'VelocityController',
+                templateUrl: 'velocity/velocity.html',
                 controllerAs: 'vm'
             })
 
