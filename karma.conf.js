@@ -20,7 +20,7 @@ module.exports = function(config) {
 
     reporters: ['progress', 'coverage', 'junit'],
     preprocessors: {
-      'app/**/*.js': ['coverage']
+      'app/**/*_test.js': ['coverage']
     },
     coverageReporter: {
       type: 'lcov',

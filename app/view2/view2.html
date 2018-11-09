@@ -1,5 +1,107 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div id="div_content_burndowns" class="div_content">
+  <div id="div_burndown">
+    <div class="content_with_tool_bar">
+      <div class="tool_bar">
+        <div><a href="javascript:$('.content_burndown_section').hide(); $('#div_current_burndown').show();" title="See current burndown"><i class="fa fa-gg-circle fa-3x"></i></a></div>
+        <div><a href="javascript:$('.content_burndown_section').hide(); $('#div_new_burndown').show();" title="Add burndown"><i class="fa fa-plus-circle fa-3x"></i></a></div>
+        <div><a href="javascript:$('.content_burndown_section').hide(); $('#div_list_burndown').show();" title="List burndown"><i class="fa fa-th-list fa-3x"></i></a></div>
+        <div><a href="javascript:$('.content_burndown_section').hide(); $('#div_see_capacity').show();" title="Manage Team Capacity"><i class="fa fa-bolt fa-3x"></i></a></div>
+      </div>
+      <div id="div_current_burndown" class="content_burndown_section">
+        <div class="div_team_release_title"><h1>ECO - <span class="sprint_txt">Sprint 5</span></h1></div>
+        <div id="div_current_sprint_info_dates" class="dates_range">
+          <span>8/11/2017</span> to
+          <span>21/11/2017</span>
+        </div>
+        <div id="div_current_sprint_info">
+          <div title="Days for this sprint"><i class="fa fa-calendar"></i> <span>10</span></div>
+          <div title="Team capacity for this Sprint"><i class="fa fa-bolt"></i> <span>90%</span></div>
+          <div title="Story Poinst planned"><i class="fa fa-tachometer"></i> <span>14</span></div>
+        </div>
+
+        <div id="div_table_current_sprint">
+          <div><a href="javascript:$('table.table_sprint').toggle();">Toggle</a> | <a href="javascript:void(0)">Export</a> | <a href="javascript:void(0)">Print</a></div>
+          <table class="table_sprint" style="width: 100%">
+            <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>Estimation</th>
+              <th>Progress</th>
+              <th>W</th>
+              <th>T</th>
+              <th>F</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>T</th>
+              <th>F</th>
+              <th>M</th>
+              <th>T</th>
+              <th>Comments</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+          </table>
+        </div>
+
+        <div id="sprint_burndown_chart_current" style="width: 90%"></div>
+      </div>
+
+      <div id="div_new_burndown" class="content_burndown_section" style="display: none"></div>
+
+      <div id="div_list_burndown" class="content_burndown_section" style="display: none">
+        <h2>Burndown list</h2>
+        <div class="container burndown_list">
+          <div class="row">
+            <div class="col list_header">Name</div>
+            <div class="col list_header">Start date <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></div>
+            <div class="col list_header">Release <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></div>
+            <div class="col-1 list_header"></div>
+            <div class="col-1 list_header"></div>
+          </div>
+          <div class="row">
+            <div class="col burndown_list_field" onclick="$('.content_burndown_section').hide(); $('#div_current_burndown').show();">Sprint 5 <i class="fa fa-gg-circle"></i> </div>
+            <div class="col burndown_list_field">08/11/2017</div>
+            <div class="col burndown_list_field">6.14</div>
+            <div class="col-1"><i class="fa fa-pencil-square-o"></i></div>
+            <div class="col-1"><i class="fa fa-trash"></i></div>
+          </div>
+          <div class="row">
+            <div class="col burndown_list_field">Sprint 4</div>
+            <div class="col burndown_list_field">08/11/2017</div>
+            <div class="col burndown_list_field">6.13</div>
+            <div class="col-1"><i class="fa fa-pencil-square-o"></i></div>
+            <div class="col-1"><i class="fa fa-trash"></i></div>
+          </div>
+          <div class="row">
+            <div class="col burndown_list_field">Sprint 3</div>
+            <div class="col burndown_list_field">08/11/2017</div>
+            <div class="col burndown_list_field">6.13</div>
+            <div class="col-1"><i class="fa fa-pencil-square-o"></i></div>
+            <div class="col-1"><i class="fa fa-trash"></i></div>
+          </div>
+          <div class="row">
+            <div class="col burndown_list_field">Sprint 2</div>
+            <div class="col burndown_list_field">08/11/2017</div>
+            <div class="col burndown_list_field">6.13</div>
+            <div class="col-1"><i class="fa fa-pencil-square-o"></i></div>
+            <div class="col-1"><i class="fa fa-trash"></i></div>
+          </div>
+          <div class="row">
+            <div class="col burndown_list_field">Sprint 1</div>
+            <div class="col burndown_list_field">08/11/2017</div>
+            <div class="col burndown_list_field">6.13</div>
+            <div class="col-1"><i class="fa fa-pencil-square-o"></i></div>
+            <div class="col-1"><i class="fa fa-trash"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

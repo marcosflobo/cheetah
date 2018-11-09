@@ -1,14 +1,14 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular.module('cheetahApp.view1', ['ngRoute'])
+    angular
+        .module('cheetahApp')
+        .controller('View1Ctrl', View1Ctrl);
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
-  });
-}])
+    View1Ctrl.$inject = ['$location', '$rootScope', 'FlashService'];
+    function View1Ctrl($location, $rootScope, FlashService) {
+        var vm = this;
 
-.controller('View1Ctrl', [function() {
+    }
 
-}]);
+})();
