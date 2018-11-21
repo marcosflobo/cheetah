@@ -16,11 +16,11 @@ module.exports = function(config) {
 
     frameworks: ['jasmine'],
 
-    browsers: ['Firefox'],
+    browsers: ['Chrome'],
 
     reporters: ['progress', 'coverage', 'junit'],
     preprocessors: {
-      'app/**/*.js': ['coverage']
+      'app/**/*_test.js': ['coverage']
     },
     coverageReporter: {
       type: 'lcov',

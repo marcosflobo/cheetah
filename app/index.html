@@ -1,36 +1,79 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="cheetahApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="cheetahApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="cheetahApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="cheetahApp" class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="cheetahApp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Cheetah</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="icon.png">
+
   <link rel="stylesheet" href="css/app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-  </ul>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+  <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-  <div ng-view></div>
+  <header>
+      <div class="row justify-content-between">
+        <div class="col-4" id="div_logo"><a href="#!/home"><img src="img/nexthink.svg" /></a></div>
+        <div class="col-4" id="menu_config_user">
+          <span class="col" id="menu_config">
+            <a href="javascript:void(0);" title="Configuration"><img src="img/5788-200.png" style="width: 32px;" /></a>
+          </span>
+          <span class="col" id="menu_user">
+            <a href="javascript:void(0);" title="Profile"><img src="img/abel-tuter.jpg" class="clip-circle" atlt="Abel tuter" style="width: 32px;" /></a>
+          </span>
+        </div>
+      </div>
+  </header>
 
-  <div>Cheetah seed app: v<span app-version></span></div>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
+  <div id="div_main" class="container-fluid">
+    <div class="row">
+      <div id="div_menu"  class="col-2">
+        <div class="col">
+          <div class=""><a href="#!/">Home</a></div>
+          <div class=""><a href="#!/burndows">Burdowns</a></div>
+          <div class=""><a href="#!/release_burndowns">Release Burndowns</a></div>
+          <div class=""><a href="#!/velocity">Velocity</a></div>
+          <!--<div class=""><a href="#!/teams">Teams</a></div>-->
+        </div>
+      </div>
+      <div class="col-10">
+        <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }"
+             ng-if="flash" ng-bind="flash.message"></div>
+        <div id="div_ng_view" ng-view></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="//code.angularjs.org/1.6.0/angular.min.js"></script>
+  <script src="//code.angularjs.org/1.6.0/angular-route.min.js"></script>
+  <script src="//code.angularjs.org/1.6.0/angular-cookies.min.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+
+  <script src="services/authentication.service.js"></script>
+  <script src="services/flash.service.js"></script>
+  <!-- Fake user service for demo that uses local storage -->
+  <script src="services/userfake.service.js"></script>
+
+  <script src="login/login.js"></script>
+  <script src="register/register.js"></script>
+
+  <script src="home/home.js"></script>
+  <script src="burndowns/burndowns.js"></script>
+  <script src="release_burndowns/release_burndowns.js"></script>
+  <script src="velocity/velocity.js"></script>
+
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

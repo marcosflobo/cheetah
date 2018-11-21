@@ -11,13 +11,36 @@ In our [wiki](https://github.com/marcosflobo/cheetah/wiki) we are adding all the
 # Agile board
 Please checkout or [Kanban board](https://github.com/marcosflobo/cheetah/projects/1) to follow up the ongoing tasks.
 
+# Frameworks used
+- AngularJS
+- Karma
+- Protractor
+
 # Test
 ## Dependencies
-To perform unit tests, we need to install some packages using [npm](https://www.npmjs.com/)
+To perform unit tests and e2e tests, we need to install some packages using [npm](https://www.npmjs.com/)
 ```bash
-npm install -g karma jasmine karma-chrome-launcher karma-firefox-launcher karma-jasmine karma-junit-reporter jasmine-core karma-coverage grunt-cli
+npm install -g karma jasmine karma-chrome-launcher karma-firefox-launcher karma-jasmine karma-junit-reporter jasmine-core karma-coverage grunt-cli protractor
 ```
+
 ## Run unit tests + code coverage
 ```bash
 karma start karma.conf.js
+```
+## Run e2e tests
+For e2e testing we are using [Protractor](https://www.protractortest.org).
+
+The webdriver-manager is a helper tool to easily get an instance of a Selenium Server running. Use it to download the necessary binaries with:
+```bash
+sudo webdriver-manager update
+```
+Now start up a server with:
+```bash
+webdriver-manager start
+```
+Al the e2e tests and configuration are located in /e2e-tests. To run the e2e tests you have to have the webdriver 
+started (as shown before) and, then, run:
+```bash
+cd e2e-tests/
+protractor protractor.conf.js
 ```
