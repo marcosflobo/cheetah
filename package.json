@@ -16,6 +16,7 @@
     "karma-coverage": "^1.1.2",
     "karma-junit-reporter": "^0.4.1",
     "protractor": "^4.0.9",
+    "webdriver-manager": "^10.2.5",
     "selenium-standalone": "^6.13.0",
     "webdriverio": "^4.12.0"
   },
