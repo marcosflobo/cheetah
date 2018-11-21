@@ -11,7 +11,7 @@ exports.config = {
     'browserName': 'chrome'
   },
 
-  baseUrl: 'http://localhost:4444/wd/hub',
+  baseUrl: 'http://localhost:8000',
 
   framework: 'jasmine',
 
